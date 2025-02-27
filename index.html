@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Img to PDF converter</title>
+		<link rel="preload" href="fonts/Raleway/Raleway-Regular.ttf" as="font"/>
+		<link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="left-pane">
+				<h2 class="greeting">Hey there!</h2>
+				<img src="images/pc-user.png" width="400"/>
+			</div>
+			<div class="right-pane">
+				<h1 class="main-heading">Easily Convert IMG to PDF</h1>
+				<form id="form" class="main-form">
+
+					<p id="instruction">Choose Images</p>	
+												
+					<label for="image-picker" id="image-picker-label">
+						<i class="fa fa-upload"></i> <span>Click here to select images<span>
+					</label>
+					<input id="image-picker" name="images" type="file" hidden accept="image/*" id="image-picker" multiple />
+				
+					<div id="select-container">
+						<label for="margin-select">MARGIN</label>
+						<select name="margin" id="margin-select">
+							<option selected value="0">None</option>
+							<option value="10">Small</option>
+							<option value="20">Medium</option>
+							<option value="30">Large</option>
+						</select>
+					</div>
+					<button id="convert-btn" class="btn" disabled><i id="submit-spinner" class="fa fa-spinner"></i><span id="submit-text">Convert to PDF</span></button>
+				</form>
+			</div>
+		</div>
+		
+		
+		<script src="scripts/jspdf.js"></script>
+
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

@@ -60,6 +60,8 @@ select {
 .right-pane {
 	flex: 1;
 	background-color: var(--primary-color);
+	padding: 16px;
+	width: 100%;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -75,7 +77,8 @@ select {
 
 .main-form {
 	display: flex;
-	width: 350px;
+	max-width: 350px;
+	width: 100%;
 	flex-direction: column;
 	gap: 16px;
 	justify-content: center;
@@ -84,6 +87,10 @@ select {
 	box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.3);
 	border-radius: 12px;
 	padding: 16px;
+}
+
+.main-heading {
+	text-align: center;
 }
 
 .btn {
@@ -157,7 +164,7 @@ select {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 	.left-pane {
 		display: none;
 	}
